@@ -1,0 +1,25 @@
+
+we need to round the command in the terminal to tell our
+application we want to use NPM modules:
+npm init
+
+Then the package.jason will appear and this the where 
+we difine the 3rd party modules we want to install in
+our application. Use the following command in terminal to 
+install the module (e.g. lodash):
+npm install lodash --save
+
+the --save is used to update the contents of package.jason. 
+The module will be live in the node_modules folder.
+
+The property 'dependencies' in package.jason will be updated.
+
+Since we have the information of 3rd party modules in package.jason,
+we can delete the node_modules folder and copy the folder to friends
+or put it on the github. 
+If we want to get the node_modules folder back, we just use the command
+in terminal (without any module name):
+npm install
+
+then the node_modules folder will be back in the folder since the 
+property 'dependencies' in package.jason contains all the info we need.
