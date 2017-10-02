@@ -13,12 +13,22 @@ const notes = require('./notes.js'); // use the relative path
 
 
 const argv = yargs.argv
-console.log('process:', process.argv);
+//console.log('process:', process.argv);
 console.log('yargs:', argv);
 var command = argv._[0];
 
 if (command === 'add') {
-    notes.addNote(argv.title, argv.body);
+    var note = notes.addNote(argv.title, argv.body);
+    
+    if (note) {
+        console.log('Note created');
+        console.log('---');
+        console.log(`Title: ${note.title}`);
+        console.log(`Body: ${note.body}`);
+    } else {
+        console.log('Note title taken');
+    }
+    
 } else if (command === 'list') {
     notes.listNote();
 } else if (command === 'read') {
