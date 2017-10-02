@@ -1,0 +1,23 @@
+use the following command to enter the debug mode:
+node inspect XXX.js
+
+The code will not be executed. It pauses before any of our code run.
+We need use 'n' to run the next line;
+or use 'c' (stands for continue) to execute the code to the end of the code
+or to the 'debugger' mark. 
+To setup the 'debugger' mark just need to type 'debugger;' in the code. 
+When use 'n' to go to the next line, it will not run the code of the line
+untill it goes to the next line. 
+(e.g. we pause at line 5, it only executed at line 4.)
+Just like the break point in Visual studio.
+
+The command: list(10) 
+prints the 10 lines above and below the line we pause.
+
+The command: repl  
+Enter the repl mode (stands for re-evaluate print loop)
+Just like the console in the chrome developer tools.
+using control c to get back to the debug mode
+
+using control c twice to shut down the debugger
+
