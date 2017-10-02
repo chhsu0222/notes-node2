@@ -51,16 +51,26 @@ var listNote = () => {
 };
 
 var getNote = (title) => {
-    console.log('Reading note:', title);
+    var notes = fetchNotes();
+    var filteredNotes = notes.filter((note) => note.title === title);
+    return filteredNotes[0];
 };
 
 var removeNote = (title) => {
     console.log('Removing note:', title);
 };
 
+var logNote = (note) => {
+    console.log('---');
+    console.log(`Title: ${note.title}`);
+    console.log(`Body: ${note.body}`);
+};
+
+
 module.exports = {
     addNote, //  ES6 syntex since key is equal to the value,
     listNote,  // same as listNode: listNode
     getNote,
-    removeNote 
+    removeNote,
+    logNote
 };
