@@ -21,3 +21,15 @@ using control c to get back to the debug mode
 
 using control c twice to shut down the debugger
 
+////////////////////////////////////////////
+
+Using the chrome Dev tool
+command: node --inspect-brk XXX.js 
+(brk means we want a break before that first line)
+
+Then turn on chrome and type: chrome://inspect
+-> we will go to the following page: chrome://inspect/#devices
+-> click "Open dedicated DevTools for Node"
+
+The blue button does exactly what 'c' does in the command line.
+Click at the beginning of the line to set (add) the break point.
